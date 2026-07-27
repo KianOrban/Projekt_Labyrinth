@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "name": "PlayerInputAction",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "a0c1a2c0-8917-402d-8dc7-215756818f44",
+            "actions": [
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "4c89f9c4-4172-4858-a5d8-f4c7d633ced9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9ba662cb-f8ed-4af5-8046-f901de55c587",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Maus und Tastatur",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Maus und Tastatur",
+            "bindingGroup": "Maus und Tastatur",
+            "devices": []
+        }
+    ]
+}
