@@ -25,7 +25,29 @@ public class PlayerController : MonoBehaviour
     private void PlayerMove()
     {
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
-        characterController.Move(move * speed * Time.deltaTime); 
+        characterController.Move(move * speed * Time.deltaTime);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(groundCheck.position, transform.TransformDirection(Vector3.down), out hit, 0.4f, groundMask))
+        {
+            string floorType = hit.collider.gameObject.tag;
+
+            switch (floorType)
+            {
+                default:
+                    speed = 12f;
+                    break;
+                case "Slow":
+                    speed = 3f;
+                    break;
+                case "Fast":
+                    speed = 20f;
+                    break;
+
+            }
+
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
