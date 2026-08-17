@@ -40,7 +40,7 @@ public class CameraController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context)
     {
         mouseDelta = context.ReadValue<Vector2>();
-        Debug.Log(mouseDelta);
+        //Debug.Log(mouseDelta);
     }
 
 
